@@ -37,7 +37,9 @@
 static force_inline int
 count_leading_zeros (uint32_t x)
 {
-#ifdef HAVE_BUILTIN_CLZ
+#ifdef _MSC_VER
+    return __lzcnt(x);
+#elif defined HAVE_BUILTIN_CLZ
     return __builtin_clz (x);
 #else
     int n = 0;
