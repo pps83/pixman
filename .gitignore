@@ -53,3 +53,6 @@ test/trap-crasher
 *.ilk
 *.obj
 *.exe
+/.vs
+*.VC.db
+*.VC.opendb
